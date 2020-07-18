@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 // import { SideInfo } from '../SideInfo/SideInfo';
 
-import { Menu } from './MainMenu.css';
+import { Menu, Navigation } from './MainMenu.css';
 
 const MainMenu = () => {
 
@@ -26,11 +26,13 @@ const MainMenu = () => {
 `)
   return (
     <Menu>
-      {MenuItems.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
-        <Link to={`/${item.object_slug}`} key={item.title}>
-          {item.title}
-        </Link>
-      ))}
+      <Navigation>
+        {MenuItems.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
+          <Link to={`/${item.object_slug}`} key={item.title}>
+            {item.title}
+          </Link>
+        ))}
+      </Navigation>
     </Menu>
   )
 }

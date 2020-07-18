@@ -45,7 +45,8 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // Create Page pages.
-        const pageTemplate = path.resolve("./src/templates/page.js")
+        const pageTemplate = path.resolve("./src/templates/Page/page.js")
+        const portfolioUnderContentTemplate = path.resolve("./src/templates/PortfolioUnderTemplate/portfolioUnderTemplate.js")
         // We want to create a detailed page for each
         // page node. We'll just use the WordPress Slug for the slug.
         // The Page ID is prefixed with 'PAGE_'
@@ -53,14 +54,14 @@ exports.createPages = ({ graphql, actions }) => {
           // Gatsby uses Redux to manage its internal state.
           // Plugins and sites can use functions like "createPage"
           // to interact with Gatsby.
-
+          console.log(edge.node.title, edge.node.template)
           createPage({
             // Each page is required to have a `path` as well
             // as a template component. The `context` is
             // optional but is often necessary so the template
             // can query data specific to each page.
             path: `/${edge.node.slug}/`,
-            component: slash(pageTemplate),
+            component: slash(edge.node.template === 'portfolio_under_content.php' ? portfolioUnderContentTemplate : pageTemplate),
             context: edge.node,
           })
         })
@@ -83,6 +84,9 @@ exports.createPages = ({ graphql, actions }) => {
                     featured_media {
                     source_url
                   }
+                  acf{
+                    portfolio_url
+                  }
                 }
               }
             }
@@ -93,7 +97,7 @@ exports.createPages = ({ graphql, actions }) => {
             console.log(result.errors)
             reject(result.errors)
           }
-          const portfolioTemplate = path.resolve("./src/templates/portfolio.js")
+          const portfolioTemplate = path.resolve("./src/templates/Portfolio/portfolio.js")
           // We want to create a detailed page for each
           // post node. We'll just use the WordPress Slug for the slug.
           // The Post ID is prefixed with 'POST_'
