@@ -73,19 +73,26 @@ exports.createPages = ({ graphql, actions }) => {
         graphql(
           `
           {
-            allWordpressWpPortfolio{
-              edges{
-                node{
-                    id
-                    slug
-                    title
-                    excerpt,
-                    content,
-                    featured_media {
+            allWordpressWpPortfolio {
+              edges {
+                node {
+                  id
+                  slug
+                  title
+                  excerpt
+                  content
+                  featured_media {
                     source_url
                   }
-                  acf{
-                    portfolio_url
+                  acf {
+                    project_url
+                    responsibilities
+                    tech_1_name
+                    tech_1_image {
+                      source_url
+                      title
+                    }
+                    category
                   }
                 }
               }

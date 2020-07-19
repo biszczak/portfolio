@@ -6,6 +6,13 @@ export const GlobalStyle = createGlobalStyle`
 ${Normalize}
 body {
   margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 23px;
+
+  h1,h2,h3 {
+    font-weight: 400;
+  }
 }
 `
 

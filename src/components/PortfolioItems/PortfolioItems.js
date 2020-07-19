@@ -17,6 +17,9 @@ const PortfolioItems = () => {
                 featured_media {
                 source_url
               }
+              acf{
+                  category
+              }
             }
           }
         }
@@ -27,13 +30,16 @@ const PortfolioItems = () => {
             {
                 projects.allWordpressWpPortfolio.edges.map(portfolioItem => (
                     <Link
+                        className="item-link"
                         key={portfolioItem.node.id}
                         to={`/portfolio/${portfolioItem.node.slug}`}>
                         <ItemContainer>
                             <img src={portfolioItem.node.featured_media.source_url} alt="Thumbnail" />
                             <div className="title-and-description">
                                 <h2>{portfolioItem.node.title}</h2>
-                                <div dangerouslySetInnerHTML={{ __html: portfolioItem.node.excerpt }} />
+                                <span className="category">{portfolioItem.node.acf.category}</span>
+                                <div className="description" dangerouslySetInnerHTML={{ __html: portfolioItem.node.excerpt }} />
+                                <span className="see">Szczegóły</span>
                             </div>
                         </ItemContainer>
                     </Link>
