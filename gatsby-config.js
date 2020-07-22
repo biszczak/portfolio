@@ -156,16 +156,22 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Noto Sans JP`,
-            variants: [`100`, `200`, '400', '500']
+            family: `Open Sans`,
+            variants: [`100`, `200`, '300', '400', '500']
           },
           {
-            family: `Noto Sans JP`,
+            family: `Open Sans`,
             subsets: [`latin`]
           },
         ],
       },
-    }
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100
+      }
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

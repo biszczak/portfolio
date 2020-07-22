@@ -69,14 +69,16 @@ import { ThemeProvider } from "styled-components";
 
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isHomepage }) => {
+
+  const style = isHomepage ? { margin: 0, padding: 0, maxWidth: 'unset' } : null;
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div>
         <MainMenu />
-        <Wrapper>
+        <Wrapper style={style}>
           {children}
         </Wrapper>
       </div>

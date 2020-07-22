@@ -8,9 +8,7 @@ color: black;
 width: 384px;
 height: 380px;
 position relative;
--webkit-box-shadow: 4px 4px 7px 0px rgba(194,192,194,1);
--moz-box-shadow: 4px 4px 7px 0px rgba(194,192,194,1);
-box-shadow: 4px 4px 7px 0px rgba(194,192,194,1);
+box-shadow: 0px 0px 15px -1px rgba(181,179,181,1);
 
 span.see {
     display: block;

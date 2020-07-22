@@ -6,14 +6,17 @@ background-color: white;
 display: flex;
 align-items: center;
 box-shadow: 4px 4px 7px 0px rgba(194,192,194,1);
+
+div.wrapper {
+    width: 1210px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
 `
 
 export const Navigation = styled.ul`
-width: 1210px;
-padding-left: 30px;
-padding-right: 30px;
-margin-left: auto;
-margin-right: auto;
 list-style: none;
 display: flex;
 justify-content: space-between;

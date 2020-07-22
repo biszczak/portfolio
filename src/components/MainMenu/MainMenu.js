@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 // import { SideInfo } from '../SideInfo/SideInfo';
 
 import { Menu, Navigation } from './MainMenu.css';
@@ -19,6 +20,7 @@ const MainMenu = () => {
           items{
           title
           object_slug
+          url
         }}
       }
     }
@@ -26,15 +28,22 @@ const MainMenu = () => {
 `)
   return (
     <Menu>
-      <Navigation>
-        {MenuItems.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
-          <li>
-            <Link to={`/${item.object_slug}`} key={item.title}>
-              {item.title}
-            </Link>
-          </li>
-        ))}
-      </Navigation>
+      <div class="wrapper">
+        <Navigation>
+          {MenuItems.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
+            <li key={item.title}>
+              {item.url.indexOf('#') !== -1
+                ? (<AnchorLink to={`/${item.url.split("//").pop()}`} >
+                  {item.title}
+                </AnchorLink>
+                )
+                : (<Link to={`/${item.object_slug}`} >
+                  {item.title}
+                </Link>)}
+            </li>
+          ))}
+        </Navigation>
+      </div>
     </Menu>
   )
 }
