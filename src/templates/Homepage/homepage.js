@@ -4,6 +4,7 @@ import Layout from '../../components/Layout/layout';
 import Top from './Sections/Top/Top';
 import About from './Sections/About/About';
 import Technologies from './Sections/Technologies/Technologies';
+import Contact from './Sections/Contact/Contact';
 
 import { Homepage } from './Homepage.css';
 
@@ -14,6 +15,7 @@ export default ({ pageContext }) => (
             <Top />
             <About />
             <Technologies />
+            <Contact />
         </Homepage>
     </Layout>
 );

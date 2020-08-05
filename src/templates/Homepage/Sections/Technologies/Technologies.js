@@ -42,7 +42,7 @@ const Technologies = () => {
                         <TechnologiesItems img={gitIcon} name="Git" />
                         <TechnologiesItems img={photoshopIcon} name="Photoshop" />
                     </div>
-                    <Link to={`/portfolio`} >
+                    <Link to={`/portfolio`} style={{ textDecoration: 'none' }}>
                         <Button>Portfolio</Button>
                     </Link>
                 </div>

@@ -37,6 +37,10 @@ div.wrapper {
         }
     }
 
+    Button {
+        width: 220px;
+    }
+
     img {
         width: 50%;
     }
