@@ -4,7 +4,8 @@ import Layout from '../../components/Layout/layout';
 import Top from './Sections/Top/Top';
 import About from './Sections/About/About';
 import Technologies from './Sections/Technologies/Technologies';
-import Contact from './Sections/Contact/Contact';
+// import Contact from './Sections/Contact/Contact';
+import Footer from './Sections/Footer/Footer';
 
 import { Homepage } from './Homepage.css';
 
@@ -15,7 +16,8 @@ export default ({ pageContext }) => (
             <Top />
             <About />
             <Technologies />
-            <Contact />
+            {/* <Contact /> */}
+            <Footer />
         </Homepage>
     </Layout>
 );

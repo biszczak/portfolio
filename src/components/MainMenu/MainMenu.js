@@ -28,7 +28,7 @@ const MainMenu = () => {
 `)
   return (
     <Menu>
-      <div class="wrapper">
+      <div className="wrapper">
         <Navigation>
           {MenuItems.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
             <li key={item.title}>

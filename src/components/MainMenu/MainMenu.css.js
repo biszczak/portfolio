@@ -19,7 +19,7 @@ div.wrapper {
 export const Navigation = styled.ul`
 list-style: none;
 display: flex;
-justify-content: space-between;
+justify-content: center;
 margin-top: 0;
 margin-bottom: 0;
 
@@ -28,11 +28,19 @@ margin-bottom: 0;
         align-items: center;
     
         a {
-            padding-top: 20px;
-            padding-bottom: 17px;
+            padding-top: 25px;
+            padding-bottom: 22px;
             text-decoration: none;
             color: black;
             border-bottom: 3px solid white;
+            margin-left: 20px;
+            margin-right: 20px;
+            transition: ease-in .2s;
+
+            &:hover {
+                border-bottom: 3px solid #09dcf5;
+                color: #09dcf5;
+            }
         }
     }
 

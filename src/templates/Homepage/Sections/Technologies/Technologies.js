@@ -23,7 +23,7 @@ import { TechnologiesSection } from './Technologies.css';
 const Technologies = () => {
     return (
         <TechnologiesSection>
-            <h2>Technologie i narzędzia</h2>
+            <h2 id="technologies">Technologie i narzędzia</h2>
             <div className="wrapper">
                 <div className="description">
                     <p>Technologie oraz narzędzia, których używam na codzień. Każda z technologii poniżej została użyta przynajmniej w jednym projekcie: </p>
