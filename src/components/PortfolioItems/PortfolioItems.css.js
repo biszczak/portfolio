@@ -69,6 +69,10 @@ opacity: 1;
 transition: ease-in .2s;
 }
 
+@media (max-width: 449px) {
+    width: 100%;
+}
+
 `;
 
 export const Grid = styled.div`
@@ -92,4 +96,9 @@ flex-wrap: wrap;
         }
     }
 }
+
+@media (max-width: 1229px) {
+    justify-content: space-around;
+}
+
 `;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const screenWidth = window.innerWidth;
-const screenHeight = document.body.scrollHeight;
-console.log({ screenWidth, screenHeight });
+let screenWidth = window.innerWidth;
+
+
 
 export const FooterSection = styled.div`
 
@@ -16,15 +16,21 @@ export const FooterSection = styled.div`
     position: relative;
     z-index: 3;
 
-    div.rocket {
-        position: absolute;
-        z-index: 0;
-        width: 80px;
-        left: -100px;
-        top: 100px;
-        animation: rocket-fly 30s linear infinite; 
-        animation-delay: 4s;
-        transform: rotate(30deg);
+    div#social-media {
+
+        div {
+            display: flex;
+            flex-align: center;
+            margin-bottom: 10px;
+
+            img {
+                margin-right: 20px;
+                
+                &:hover {
+                    background-color: #fb088e;
+                }
+            }
+        }
     }
 
     div.gear {
@@ -67,17 +73,36 @@ export const FooterSection = styled.div`
 
     }
 
+      @media (max-width: 899px) {
+        margin-top: 50px;
+      }
+
+      @media (max-width: 899px) {
+        
+        div.wrapper {
+            padding: 50px 15px;
+        }
+    }
+
+    @media (max-width: 566px) {
+
+        div.wrapper {
+            flex-direction: column;
+
+            #social-media {
+                margin-top: 20px;
+            }
+        }
+    }
+
     @keyframes gear-animation {
         0% {left: -100px} 
         15%{left: -100px}
         100% {left: ${screenWidth + 200}px} 
-      }
+    }
+
     @keyframes rotate-gear-animation {
         0% {transform: rotate(0deg)} 
         100% {transform: rotate(360deg)} 
-      }
-    @keyframes rocket-fly {
-        0% {left: -100px; top: 100px;} 
-        100% {left: ${screenWidth + 200}px; top: ${-screenHeight - 200}px;} 
-      }
+    }
 `;

@@ -4,6 +4,7 @@ import triangleLogo from '../../images/Triangle-logo.png';
 import { AnimationContainer } from './MainAnimation.css';
 
 const MainAnimation = () => {
+
     return (
         <AnimationContainer>
             <div className="wrapper">
@@ -45,7 +46,6 @@ const MainAnimation = () => {
                         </div>
                     </div>
                 </div>
-                <h1>Solid code, modern design</h1>
             </div>
         </AnimationContainer>
     )

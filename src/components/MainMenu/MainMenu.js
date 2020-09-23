@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 // import { SideInfo } from '../SideInfo/SideInfo';
+import Ufo from '../Animated/Ufo/Ufo';
 
-import { Menu, Navigation } from './MainMenu.css';
+import { Menu, Navigation, MobileNavigation, HamburgerToggle } from './MainMenu.css';
 
-const MainMenu = () => {
+function MainMenu() {
+
+  const [state, setState] = useState({
+    menuOpen: false,
+  });
 
   const MenuItems = useStaticQuery(graphql`
   {
@@ -26,25 +31,43 @@ const MainMenu = () => {
     }
   }
 `)
+
+  const menuElements = MenuItems.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
+    <li key={item.title}>
+      {item.url.indexOf('#') !== -1
+        ? (<AnchorLink to={`/${item.url.split("//").pop()}`} >
+          {item.title}
+        </AnchorLink>
+        )
+        : (<Link to={`/${item.object_slug}`} >
+          {item.title}
+        </Link>)}
+    </li>
+  ))
+
   return (
-    <Menu>
-      <div className="wrapper">
-        <Navigation>
-          {MenuItems.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
-            <li key={item.title}>
-              {item.url.indexOf('#') !== -1
-                ? (<AnchorLink to={`/${item.url.split("//").pop()}`} >
-                  {item.title}
-                </AnchorLink>
-                )
-                : (<Link to={`/${item.object_slug}`} >
-                  {item.title}
-                </Link>)}
-            </li>
-          ))}
-        </Navigation>
-      </div>
-    </Menu>
+    <React.Fragment>
+      <HamburgerToggle
+        className={state.menuOpen ? 'open' : null}
+        onClick={() => setState({ menuOpen: !state.menuOpen })}>
+        <div className="menu-btn__burger"></div>
+      </HamburgerToggle>
+      <Menu>
+        <div className="wrapper">
+          <Navigation id="navigation">
+            <div className="ufo">
+              <Ufo />
+            </div>
+            {menuElements}
+          </Navigation>
+          <MobileNavigation id="mobile-navigation" className={state.menuOpen ? 'open' : null}>
+            <ul onClick={() => setState({ menuOpen: !state.menuOpen })}>
+              {menuElements}
+            </ul>
+          </MobileNavigation>
+        </div>
+      </Menu>
+    </React.Fragment>
   )
 }
 

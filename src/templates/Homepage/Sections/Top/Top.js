@@ -17,6 +17,7 @@ const Top = () => {
             {/* <h1 dangerouslySetInnerHTML={{ __html: pageContext.title }} /> */}
             {/* <div dangerouslySetInnerHTML={{ __html: pageContext.content }} /> */}
             <MainAnimation />
+            <h1>Solid code, modern design</h1>
             <AnchorLink to={`/home#about`} >
                 <Button className="see">Dowiedz się więcej</Button>
             </AnchorLink>

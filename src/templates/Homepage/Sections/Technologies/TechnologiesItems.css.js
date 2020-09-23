@@ -11,4 +11,8 @@ margin-bottom: 20px;
  img.tech {
      width: 50px;
  }
+
+ @media (max-width: 566px) {
+     width: 100%;
+ }
 `;

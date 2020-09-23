@@ -12,6 +12,7 @@ margin-right: auto;
 h2 {
     font-size: 32px;
     margin-bottom: 70px;
+    margin-top: 0;
 }
 
 div.wrapper {
@@ -50,4 +51,51 @@ div.wrapper {
         margin-right: 20px;
     }
 }
+
+@media (max-width: 1229px) {
+
+    div.wrapper {
+
+        div.description {
+            width: 100%;
+
+            div.tech-container {
+                justify-content: space-around;
+                
+                img {
+                    display: block;
+                }
+            }
+        }
+
+        img {
+            display: none;
+        }
+}
+
+}
+
+@media (max-width: 899px) {
+    padding: 50px 15px;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 566px) {
+    width: unset;
+
+    div.wrapper {
+
+        div.description {
+            margin-right: 0;
+        }
+    }
+
+    h2 {
+        line-height: 32px;
+    }
+}
+
 `;

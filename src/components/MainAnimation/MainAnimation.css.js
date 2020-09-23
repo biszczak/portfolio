@@ -1,33 +1,28 @@
 import styled from 'styled-components';
 
 export const AnimationContainer = styled.div`
-    width: 550px;
-    height: 480px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    transform: scale(0.7);
-    right: -20px;
+    display: flex;
+    justify-content: center;
 
-    .wrapper {
-        width: 100%;
-        height: 100%;
+    #hamburger-menu {
+      position: absolute;
+      top: -280px;
+      left: -300px;
+      color: white;
     }
 
-    h1 {
-        font-weight: normal;
-        font-style: normal;
-        position: absolute;
-        top: 470px;
-        left: 0px;
-        font-size: 42px;
+    .wrapper {
+      width: 450px;
+      height: 500px;
+      position: relative;
+      transform: scale(.7);
     }
 
     img {
-        position: absolute;
-        top: 24px;
-        left: 137px;
-        z-index: 9;
+      position: absolute;
+      top: 7px;
+      left: 137px;
+      z-index: 9;
     }
       
       .box {
@@ -225,4 +220,26 @@ export const AnimationContainer = styled.div`
           transform: rotate(-1turn);
         }
       }
+
+      @media (max-width: 566px) {
+        
+        .wrapper {
+          transform: scale(.5);
+        }
+      }
+
+      @media (max-width: 399px) {
+        
+        .wrapper {
+          margin-left: -20px;
+        }
+      }
+
+      @media (max-width: 344px) {
+        
+        .wrapper {
+          margin-left: -30px;
+        }
+      }
+
 `;

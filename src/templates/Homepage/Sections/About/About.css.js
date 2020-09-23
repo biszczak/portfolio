@@ -16,7 +16,7 @@ export const AboutSection = styled.section`
 
     h2 {
         font-size: 32px;
-    margin-bottom: 70px;
+        margin-bottom: 70px;
     }
 
     p.description {
@@ -27,5 +27,27 @@ export const AboutSection = styled.section`
     div.wrapper{
         display: flex;
         justify-content: space-between;
+    }
+
+    @media (max-width: 1229px) {
+
+        div.wrapper{
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (max-width: 1229px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @media (max-width: 899px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        
+        h2 {
+            margin-bottom: 40px;
+        }
     }
 `;
