@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../../components/Layout/layout';
 
 import Top from './Sections/Top/Top';
@@ -12,7 +12,8 @@ import Satellite from '../../components/Animated/Satellite/Satellite';
 
 import { Homepage } from './Homepage.css';
 
-export default ({ pageContext }) => {
+export default () => {
+
 
     return (
         <Layout className="homepage-layout" isHomepage={true}>

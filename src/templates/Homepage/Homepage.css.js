@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
-const screenHeight = window.innerHeight;
-const screenWidth = window.innerWidth;
-const astronautTop = Math.floor(screenHeight * 0.5);
+let height;
+let width;
+
+if (typeof window !== 'undefined') {
+    height = window.innerHeight;
+    width = window.innerWidth;
+}
+
+const astronautTop = Math.floor(height * 0.5);
 
 
 export const Homepage = styled.div`
@@ -27,7 +33,7 @@ div.rocket {
     z-index: -1;
     width: 80px;
     left: -100px;
-    top: ${screenHeight}px;
+    top: ${height}px;
     animation: rocket-fly 20s linear infinite; 
     transform: rotate(45deg);
     animation-delay: 10s;
@@ -48,7 +54,7 @@ div.astronaut {
     z-index: -1;
     height: 150px;
     width: 70px;
-    left: ${screenWidth}px;
+    left: ${width}px;
     top: ${astronautTop}px;
     animation: astronaut-fly 20s linear infinite; 
 
@@ -62,8 +68,8 @@ div.astronaut {
 
 
     @keyframes rocket-fly {
-        0% {left: -100px; top: ${screenHeight + 200}px;}
-        100% {left: ${screenWidth + 200}px; top: 0px;} 
+        0% {left: -100px; top: ${height + 200}px;}
+        100% {left: ${width + 200}px; top: 0px;} 
       }
 
     @keyframes satellite-fly {
@@ -89,7 +95,7 @@ div.astronaut {
     }
 
     @keyframes astronaut-fly {
-        0% {left: ${screenWidth}px;}
+        0% {left: ${width}px;}
         100% {left: -100px;} 
     }
 
