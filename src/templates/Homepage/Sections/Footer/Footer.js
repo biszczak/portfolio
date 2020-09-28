@@ -26,11 +26,11 @@ const Footer = () => {
                     <h3>SOCJAL MEDIA</h3>
                     <div>
                         <img src={linkedIcon} alt="linkedin" />
-                        <span>LinkedIN</span>
+                        <a href="https://www.linkedin.com/in/damian-biszczak/" target="_blank">LinkedIN</a>
                     </div>
                     <div>
                         <img src={githubIcon} alt="github" />
-                        <span>Github</span>
+                        <a href="https://github.com/biszczak" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>

@@ -14,6 +14,7 @@ const PortfolioItems = () => {
                 title
                 excerpt,
                 content,
+                wordpress_id,
                 featured_media {
                 source_url
               }
@@ -24,11 +25,14 @@ const PortfolioItems = () => {
           }
         }
       }
-    `)
+    `);
+
+    const wordpressOrder = projects.allWordpressWpPortfolio.edges.sort((a, b) => b.node.wordpress_id - a.node.wordpress_id);
+
     return (
         <Grid>
             {
-                projects.allWordpressWpPortfolio.edges.map(portfolioItem => (
+                wordpressOrder.map(portfolioItem => (
                     <Link
                         className="item-link"
                         key={portfolioItem.node.id}

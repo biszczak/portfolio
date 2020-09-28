@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Layout from '../../components/Layout/layout';
 import PortfolioItems from '../../components/PortfolioItems/PortfolioItems';
 import Footer from '../Homepage/Sections/Footer/Footer';

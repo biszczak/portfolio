@@ -100,9 +100,18 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   acf {
                     project_url
-                    responsibilities
-                    technologies
                     category
+                    description
+                    responsibilities
+                    image_1 {
+                      source_url
+                    }
+                    image_2 {
+                      source_url
+                    }
+                    image_3 {
+                      source_url
+                    }
                   }
                 }
               }

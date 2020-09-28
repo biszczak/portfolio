@@ -25,9 +25,16 @@ export const FooterSection = styled.div`
 
             img {
                 margin-right: 20px;
+                border-radius: 100%;
                 
+            }
+
+            a {
+                text-decoration: none;
+                transition: ease-in .2s;
+
                 &:hover {
-                    background-color: #fb088e;
+                    color: #fb088e;
                 }
             }
         }

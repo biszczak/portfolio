@@ -15,6 +15,10 @@ margin-bottom: 20px;
 `;
 
 export const Portfolio = styled.div`
+    div#screenshots img {
+        margin-top: 60px;
+    }
+
     img.main {
         width: 100%;
     }
@@ -58,6 +62,17 @@ export const Portfolio = styled.div`
             background: #aa0660;
         }
         
+    }
+
+    div {
+
+        div.responsibilities {
+            white-space: pre-line;
+        }
+
+        div.desc {
+            white-space: pre-line;
+        }
     }
 
     div.back {
