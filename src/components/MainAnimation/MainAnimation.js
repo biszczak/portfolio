@@ -1,5 +1,5 @@
 import React from 'react';
-import triangleLogo from '../../images/Triangle-logo.png';
+import triangleLogo from '../../images/triangle.png';
 
 import { AnimationContainer } from './MainAnimation.css';
 
