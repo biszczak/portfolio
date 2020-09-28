@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-let screenWidth = window.innerWidth;
+let width;
+
+if (typeof window !== 'undefined') {
+    width = window.innerWidth;
+}
 
 
 
@@ -105,7 +109,7 @@ export const FooterSection = styled.div`
     @keyframes gear-animation {
         0% {left: -100px} 
         15%{left: -100px}
-        100% {left: ${screenWidth + 200}px} 
+        100% {left: ${width + 200}px} 
     }
 
     @keyframes rotate-gear-animation {
