@@ -8,7 +8,7 @@ const About = () => {
     return (
         <AboutSection>
             <h2 id="about">O mnie</h2>
-            <p className="description">Cześć! Nazwyam się Damian Biszczak.<br />
+            <p className="description">Mam na imię Damian.<br />
             Jestem programistą z ponad 4 letnim stażem, w tym 2 lata komercyjnego doświadczenia na stanowisku Front-End Developer. Zajmuję się tworzeniem aplikacji webowych oraz stron internetowych z użyciem najnowszych technologii. Moje projekty dostosowane są do wyświetlania zarówno na desktopach jak i urządzeniach mobilnych.  </p>
             <div className="wrapper">
                 <PromoItem title="Strony internetowe" icon="websites-icon">

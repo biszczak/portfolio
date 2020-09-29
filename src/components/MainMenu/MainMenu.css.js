@@ -144,7 +144,7 @@ export const MobileNavigation = styled.div`
         height: 80px;
         width: 80px;
         z-index: 98;
-        background-color: black;
+        background-color: #141518;
         flex-direction: column;
         margin-left: -30px;
         margin-top: 0;
