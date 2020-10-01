@@ -8,6 +8,7 @@ display: none;
   height: 50px;
   position: fixed;
   left: 15px;
+  top: 0;
   z-index: 99;
   justify-content: center;
   align-items: center;
@@ -68,6 +69,13 @@ div.wrapper {
     padding-right: 30px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 899px) {
+  @supports (-webkit-touch-callout: none) {
+    height: 0;
+    top: 0;
+  }
 }
 
 `
@@ -133,6 +141,7 @@ div.ufo {
 
     @media (max-width: 899px) {
         display: none;
+        box-shadow: none;
     }
 
 `;
@@ -150,6 +159,11 @@ export const MobileNavigation = styled.div`
         margin-top: 0;
         box-shadow: none;
         transition: ease-in .3s;
+
+        @supports (-webkit-touch-callout: none) {
+          position: fixed;
+          top: 0;
+        }
 
         ul{
           position: relative;
