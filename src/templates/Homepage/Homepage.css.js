@@ -9,7 +9,7 @@ if (typeof window !== 'undefined') {
 }
 
 const astronautTop = Math.floor(height * 0.5);
-
+/* */
 
 export const Homepage = styled.div`
 position: relative;
