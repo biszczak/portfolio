@@ -7,6 +7,10 @@ export const Alien = styled.div`
     z-index: -1;
     animation: show 15s linear infinite; 
 
+    img {
+        width: 100%;
+    }
+
     .eye {
         position: absolute;
         height: 5px;
