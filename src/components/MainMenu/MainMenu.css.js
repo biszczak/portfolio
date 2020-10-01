@@ -69,6 +69,7 @@ div.wrapper {
     padding-right: 30px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 @media (max-width: 899px) {

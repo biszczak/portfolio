@@ -3,6 +3,7 @@ import techBackground from '../../../../images/tech-background.jpg';
 import TechnologiesItems from './TechnologiesItems';
 import { Link } from 'gatsby';
 import Button from '../../../../components/Button/Button';
+import Alien from '../../../../components/Animated/Alien/Alien';
 
 import htmlIcon from '../../../../images/html-ico.png';
 import cssIcon from '../../../../images/css-ico.png';
@@ -43,7 +44,10 @@ const Technologies = () => {
                         <TechnologiesItems img={photoshopIcon} name="Photoshop" />
                     </div>
                     <Link to={`/portfolio`} style={{ textDecoration: 'none' }}>
-                        <Button>Portfolio</Button>
+                        <Button>
+                            <Alien />
+                            Portfolio
+                        </Button>
                     </Link>
                 </div>
                 <img src={techBackground} alt="technologies" />

@@ -34,12 +34,20 @@ div.wrapper {
         }
 
         button {
-            margin-top: 22px;
+            margin-top: 52px;
         }
     }
 
     Button {
+        position: relative;
         width: 220px;
+
+        div {
+
+            img {
+                display: block;
+            }
+        }
     }
 
     img {
