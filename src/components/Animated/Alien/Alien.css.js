@@ -7,8 +7,8 @@ export const Alien = styled.div`
     z-index: -1;
     animation: show 15s linear infinite; 
 
-    img {
-        width: 100%;
+    img.alien-img {
+        width: 100% !important;
     }
 
     .eye {
